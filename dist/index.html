@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scout</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJujZF30JYmajAKkjnE2AN5BWFH09N5do"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <img src="scout.png" alt="Scout Logo" class="logo">
+    </div>
+    <div class="quote">
+      explore locations from the article you're reading
+    </div>
+    <div class="form-container">
+      <form id="generateForm">
+        <input type="text" id="urlInput" placeholder="Enter article URL" required>
+        <button type="submit">Generate</button>
+        <div id="errorMessage" class="error"></div>
+        <div id="loadingSpinner" class="spinner"></div>
+      </form>
+    </div>
+    <div class="map-container">
+      <div id="map"></div>
+    </div>
+  </div>
+</body>
+</html>

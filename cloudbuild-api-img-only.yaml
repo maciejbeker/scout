@@ -1,0 +1,10 @@
+steps:
+  # Build and deploy
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/scout-api', './api']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/scout-api']
+
+images:
+  - 'gcr.io/$PROJECT_ID/scout-api'
