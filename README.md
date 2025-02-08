@@ -56,6 +56,14 @@ docker run -p 8080:8080 \
 ### Frontend Service
 
 ```bash
+# Build and run the frontend
+docker build -t scout-frontend .
+docker run -p 80:8080 scout-frontend
+```
+
+### Using Docker Compose (Recommended)
+
+```bash
 docker-compose up --build
 ```
 
