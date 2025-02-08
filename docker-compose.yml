@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "80:8080"
+    depends_on:
+      - api
+
+  api:
+    build: ./api
+    ports:
+      - "8080:8080"
+    environment:
+      - MAPS_API_KEY=${MAPS_API_KEY}
+      - GENAI_API_KEY=${GENAI_API_KEY}
